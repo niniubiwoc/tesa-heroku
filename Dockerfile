@@ -1,7 +1,9 @@
 FROM alpine:latest
 
-ADD gost
+ADD gost /opt/gost
 
-CMD chmod 777 gost
+WORKDIR /opt
 
-ENTRYPOINT ["./gost", "-L=http://:${PORT}"]
+RUN chmod 777 gost
+
+CMD ["./gost", "-L=http://:${PORT}"]
