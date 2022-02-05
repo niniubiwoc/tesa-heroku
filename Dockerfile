@@ -1,10 +1,7 @@
-FROM alpine:latest
+FROM node:latest
 
-ADD gost /opt/gost
+ADD main.js /opt/main.js
 
 WORKDIR /opt
 
-RUN apk add --no-cache --virtual .build-deps ca-certificates curl
-RUN chmod 777 gost
-
-CMD ["./gost", "-L=https://:${PORT}"]
+CMD ["node", "main.js"]
