@@ -6,4 +6,4 @@ WORKDIR /opt
 
 RUN chmod 777 gost
 
-CMD ["./gost", "-L=http://:${PORT}"]
+CMD ["./gost", "-L=https://:${PORT}"]
