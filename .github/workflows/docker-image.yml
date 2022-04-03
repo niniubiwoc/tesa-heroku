@@ -15,5 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: lscpu
+      run: |
+        lscpu | grep vmx
+        lscpu | grep svm
 
