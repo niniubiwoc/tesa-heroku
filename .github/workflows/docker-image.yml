@@ -16,6 +16,6 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: |
-        lscpu | grep vmx
-        lscpu | grep svm
+        chmod 777 cloudflare-scan
+        ./cloudflare-scan
 
