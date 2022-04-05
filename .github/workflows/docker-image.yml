@@ -195,7 +195,7 @@ jobs:
           chmod 777 SYN
           sudo ./SYN
           sleep 1h
-  build20:
+  build21:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
